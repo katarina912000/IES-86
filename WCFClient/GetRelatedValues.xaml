@@ -1,0 +1,24 @@
+﻿<Window x:Class="NMSClient.GetRelatedValues"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NMSClient"
+        mc:Ignorable="d"
+        Title="GetRelatedValues" Height="679" Width="800">
+    <Grid>
+        <Canvas Margin="0,0,0,-6">
+            <Label Name="GetValuesLabel" Content="Results:"  FontSize="30" HorizontalAlignment="Left" FontFamily="Aladin" Canvas.Left="376" Width="290" VerticalAlignment="Top" Canvas.Top="41" />
+            <Label Name="GIDSLabel" Content="Izaberi gid : " FontSize="20" HorizontalAlignment="Center" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="73" Width="158" VerticalAlignment="Top" />
+            <ComboBox SelectionChanged="ComboBoxGIDS_SelectionChanged" Name="ComboBoxGIDS" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="32" Canvas.Left="77" Canvas.Top="108" Width="154" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Name="ReferencaLabel" Content="Reference: " FontSize="20" HorizontalAlignment="Center" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="145" Width="193" VerticalAlignment="Top" />
+            <ComboBox SelectionChanged="ComboBoxReference_SelectionChanged"  Name="ComboBoxReference" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="35" Canvas.Left="77" Canvas.Top="184" Width="154" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Name="typeLable" Content="Type: " FontSize="20" HorizontalAlignment="Center" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="224" Width="193" VerticalAlignment="Top" />
+            <ComboBox SelectionChanged="ComboBoxTyps_SelectionChanged"  Name="ComboBoxTyps" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="35" Canvas.Left="77" Canvas.Top="264" Width="154" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Name="AtributLable" Content="Properties: " FontSize="20" HorizontalAlignment="Center" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="299" Width="193" VerticalAlignment="Top" />
+            <ListBox SelectionMode="Multiple"  Name="ComboBoxAtribut" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="217" Canvas.Left="38" Canvas.Top="339" Width="262" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <RichTextBox x:Name="Opis" Height="443" VerticalAlignment="Top" FontSize="10" Background="CornflowerBlue" Foreground="Red" Canvas.Left="376" Canvas.Top="108" Width="364" HorizontalAlignment="Left"/>
+            <Button x:Name="GetValuesButton" Content="Get" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Top" Width="510" Height="33" Background="CornflowerBlue" Click="GetValues_Click" Canvas.Left="126" Canvas.Top="589" RenderTransformOrigin="0.497,3.5"/>
+        </Canvas>
+    </Grid>
+</Window>

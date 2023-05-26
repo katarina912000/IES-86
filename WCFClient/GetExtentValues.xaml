@@ -1,0 +1,20 @@
+﻿<Window x:Class="NMSClient.GetExtentValues"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NMSClient"
+        mc:Ignorable="d"
+        Title="GetExtentValues" Height="603" Width="800">
+    <Grid>
+        <Canvas Margin="0,0,0,-6">
+            <Label Name="TypeLabel" Content="Model code : " FontSize="25" HorizontalAlignment="Center" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="73" Width="158" VerticalAlignment="Top" />
+            <ComboBox SelectionChanged="ComboBoxTypes_SelectionChanged" Name="ComboBoxTypes" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="32" Canvas.Left="77" Canvas.Top="120" Width="154"/>
+            <Label Name="AtributsLabel" Content="Properties : " FontSize="25" HorizontalAlignment="Left" FontFamily="Aladin" Canvas.Left="39" Canvas.Top="182" Width="193" VerticalAlignment="Center" />
+            <ListBox SelectionMode="Multiple" Name="ListBoxAtributs" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Height="256" Canvas.Left="38" Canvas.Top="227" Width="251" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RichTextBox IsReadOnly="True" x:Name="Opis"  Height="388" VerticalAlignment="Top" FontSize="10" Background="CornflowerBlue" Foreground="Red" Canvas.Left="376" Canvas.Top="95" Width="364" HorizontalAlignment="Center"/>
+            <Button x:Name="GetExtentValuesButton" Content="Get" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Width="491" Height="46" Background="CornflowerBlue" Click="GetValues_Click" Canvas.Left="120" Canvas.Top="498" RenderTransformOrigin="0.513,0.554"/>
+            <Label x:Name="label" Content="Results:" FontSize="30" Canvas.Left="376" Canvas.Top="38" Height="52" Width="132"/>
+        </Canvas>
+    </Grid>
+</Window>

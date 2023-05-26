@@ -1,0 +1,23 @@
+﻿<Window x:Class="NMSClient.GetValues"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NMSClient"
+      mc:Ignorable="d"
+      Title="GetValues" Height="655" Width="886">
+
+    <Canvas Margin="0,0,0,-6">
+        <Label Name="GIDSLabel" Content="GID : " FontSize="25" HorizontalAlignment="Center" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="73" Width="158" VerticalAlignment="Top" />
+        <ComboBox Name="ComboBoxGIDS" SelectionChanged="ComboBoxGIDS_SelectionChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="32" Canvas.Left="77" Canvas.Top="120" Width="154"/>
+        <Label Name="AtributsLabel" Content="Properties:" FontSize="25" HorizontalAlignment="Left" FontFamily="Aladin" Canvas.Left="38" Canvas.Top="175" Width="193" VerticalAlignment="Center" />
+        <ListBox SelectionMode="Multiple"   SelectionChanged="ComboBoxAtributs_SelectionChanged"  Name="ComboBoxAtributs" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="274" Canvas.Left="38" Canvas.Top="222" Width="241" HorizontalAlignment="Center" VerticalAlignment="Top" >
+
+        </ListBox>
+
+        <RichTextBox IsReadOnly="True" x:Name="Opis"  Height="401" VerticalAlignment="Center" FontSize="10" Background="CornflowerBlue" Foreground="White" Canvas.Left="376" Canvas.Top="95" Width="461" HorizontalAlignment="Left"/>
+        <Button x:Name="GetValuesButton" Content="Get" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="642" Height="33" Background="CornflowerBlue" Click="GetValues_Click" Canvas.Left="77" Canvas.Top="538"/>
+        <Label  Content="Results:" Canvas.Left="391" Canvas.Top="39" Width="116" FontSize="30"/>
+    </Canvas>
+
+</Window>
